@@ -87,7 +87,6 @@ npm run test:all        # Run API + Web tests
 | **BDD** | ❌ | Cucumber |
 | **Data** | Faker.js | DataGenerator |
 | **CI/CD** | GitHub Actions | GitHub Actions |
-| **Reports** | Cypress Dashboard | Mochawesome |
 
 ## 📊 CI/CD Pipeline
 
@@ -95,7 +94,7 @@ Automated pipeline that runs on **push** or **pull request** to `main` branch:
 
 - ✅ Runs API and Web tests in parallel
 - ✅ Uploads screenshots on failure
-- ✅ Node.js 18
+- ✅ Node.js 20
 - ✅ Ubuntu runner
 
 ## 🤝 Design Patterns Implemented
