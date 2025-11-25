@@ -1,0 +1,21 @@
+{
+  "name": "cypress-serverest-api-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:headless": "cypress run --headless",
+    "test:api": "cypress run --spec 'cypress/e2e/api/**/*'",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox"
+  },
+  "keywords": ["cypress", "api-testing", "automation", "e2e", "javascript", "serverest"],
+  "author": "Gleisson Santos",
+  "license": "ISC",
+  "description": "Comprehensive API test automation suite for ServeRest platform using Cypress, featuring Builder Pattern, custom commands, and dynamic data generation with Faker.js",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "cypress": "^15.6.0"
+  }
+}

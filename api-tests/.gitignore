@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Cypress
+cypress/screenshots/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
