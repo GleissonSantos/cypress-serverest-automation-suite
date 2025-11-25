@@ -1,0 +1,57 @@
+name: Cypress ServeRest Automation Suite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  api-tests:
+    name: API Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install API Dependencies
+        working-directory: ./api-tests
+        run: npm ci
+        
+      - name: Run API Tests
+        working-directory: ./api-tests
+        run: npm test
+
+  web-tests:
+    name: Web Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Web Dependencies
+        working-directory: ./web-tests
+        run: npm ci
+        
+      - name: Run Web Tests
+        working-directory: ./web-tests
+        run: npm test
+        
+      - name: Upload Screenshots
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: web-screenshots
+          path: web-tests/cypress/screenshots/
