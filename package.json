@@ -1,0 +1,41 @@
+{
+  "name": "cypress-serverest-automation-suite",
+  "version": "1.0.0",
+  "description": "Suite completa de automação de testes para ServeRest - API + Web Tests",
+  "main": "index.js",
+  "scripts": {
+    "test:api": "cd api-tests && npm test",
+    "test:web": "cd web-tests && npm test", 
+    "test:all": "npm run test:api && npm run test:web",
+    "install:all": "cd api-tests && npm install && cd ../web-tests && npm install",
+    "cypress:open:api": "cd api-tests && npm run test:open",
+    "cypress:open:web": "cd web-tests && npm run cypress:open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GleissonSantos/cypress-serverest-automation-suite.git"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "api-testing",
+    "web-testing", 
+    "builder-pattern",
+    "page-object-model",
+    "cucumber",
+    "bdd",
+    "servetest",
+    "qa"
+  ],
+  "author": "Gleisson Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GleissonSantos/cypress-serverest-automation-suite/issues"
+  },
+  "homepage": "https://github.com/GleissonSantos/cypress-serverest-automation-suite#readme",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
