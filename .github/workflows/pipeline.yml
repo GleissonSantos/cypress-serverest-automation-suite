@@ -2,9 +2,9 @@ name: Cypress ServeRest Automation Suite
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs:
   api-tests:
