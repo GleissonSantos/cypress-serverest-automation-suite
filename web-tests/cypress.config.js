@@ -7,7 +7,7 @@ const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://front.serverest.dev',
-    specPattern: "**/*.feature", // extensão .feature para executar o gherkin
+    specPattern: "**/*.feature", // extension .feature to enable cucumber preprocessor
     defaultCommandTimeout: 5000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
