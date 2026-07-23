@@ -35,7 +35,7 @@ cypress-serverest-automation-suite/
 ## 🚀 How to Run
 
 ### Prerequisites
-- Node.js v18+
+- Node.js v20+
 - npm or yarn
 
 ### API Tests
@@ -90,12 +90,40 @@ npm run test:all        # Run API + Web tests
 
 ## 📊 CI/CD Pipeline
 
-Automated pipeline that runs on **push** or **pull request** to `main` branch:
+Automated pipeline that runs on **push** or **pull request** to `main` or `develop` branches:
 
 - ✅ Runs API and Web tests in parallel
 - ✅ Uploads screenshots on failure
 - ✅ Node.js 20
 - ✅ Ubuntu runner
+
+## 🌿 Git Workflow
+
+This project uses a simplified Git Flow:
+
+- **`main`**: Production-ready code, protected branch
+- **`develop`**: Development branch, integration of features
+- **Feature branches**: Created from `develop` for new features
+
+### Contributing
+
+```bash
+# Clone the repository
+git clone https://github.com/GleissonSantos/cypress-serverest-automation-suite.git
+
+# Create a feature branch from develop
+git checkout develop
+git checkout -b feature/your-feature-name
+
+# Make your changes and commit
+git add .
+git commit -m "feat: your feature description"
+
+# Push and create a Pull Request to develop
+git push origin feature/your-feature-name
+```
+
+**Note:** All Pull Requests will trigger the CI/CD pipeline automatically.
 
 ## 🤝 Design Patterns Implemented
 

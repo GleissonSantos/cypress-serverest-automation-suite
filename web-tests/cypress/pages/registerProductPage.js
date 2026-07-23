@@ -46,7 +46,7 @@ export default {
     },
 
     registerTheSameProductTwice(productName, productPrice, productDescription, productQuantity) {
-        // Firts registration
+        // First registration
         this.fillProductName(productName)
         this.fillProductPrice(productPrice)
         this.fillProductDescription(productDescription)
